@@ -1,0 +1,10 @@
+@model ProductListViewModel
+
+<input type="search" name="@Model.SearchFieldName" value="@Model.Search"><button type="submit">Cerca</button>
+
+<ul>
+@foreach(ProductViewModel product in Model.Results)
+{
+    <li>@product.Name (ID: @product.Id)</li>
+}
+</ul>
